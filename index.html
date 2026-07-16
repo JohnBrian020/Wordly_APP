@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly_APP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Wordly_APP</h1>
+        <p>A single page dictionary application that looks up world definitions, synonyms and pronunciations</p>
+        <button id="themeBtn">Theme</button>
+    </header>
+    <main>
+        <section class="search-section">
+            <form id="search">
+                <p>Please search for a word</p>
+                <input type="text" id="word" name="word" placeholder="Enter a word" required>
+                <button type="search">Search</button>
+            </form>
+        </section>
+        <section class="message-section">
+            <h2>Message</h2>
+        </section>
+        <section class="results-section">
+            <div id="results">
+                <h2>Results</h2>
+                <div id="definition">
+                    <h3>Definition</h3>
+                </div>
+                <div id="pronunciation">
+                    <h3>pronunciation</h3>
+                </div>
+                <div id="audio">
+                    <audio></audio>
+                </div>
+                <button type="addToFavourites">Add To Favourites</button>
+            </div>
+        </section>
+        <section class="favourites-section">
+            <div id="favourites">
+                <h2>Favourites</h2>
+                <p>No favourite words saved yet.</p>
+
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js" defer></script>  
+</body>
+</html>

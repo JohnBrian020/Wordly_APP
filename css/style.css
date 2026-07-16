@@ -1,0 +1,113 @@
+:root{
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --section-color: #f5f5f5;
+    --button-color: #000000;
+    --button-text: #ffffff;
+    --input-color: #ffffff;
+}
+/* Dark Theme */
+body.dark-theme{
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --section-color: #111111;
+    --button-color: #ffffff;
+    --button-text: #000000;
+    --input-color: #222222;
+}
+body{
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+header{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+header h1{
+    font-size: 2em;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+header p{
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+#themeBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: var(--button-text);
+}
+/* All Sections */
+
+.search-section,
+.message-section,
+.results-section,
+.favourites-section{
+
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin: 10px;
+    background-color: var(--section-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+
+.search-section:hover,
+.message-section:hover,
+.results-section:hover,
+.favourites-section:hover{
+    box-shadow: 0 0 30px rgba(255,0,0,0.731);
+    transform: scale(1.05);
+
+}
+
+form p{
+    font-size: 1.5em;
+}
+form input[type="text"]{
+
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background-color: var(--input-color);
+    color: var(--text-color);
+
+}
+
+form button[type="search"],
+button[type="addToFavourites"]{
+
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
