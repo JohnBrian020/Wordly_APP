@@ -59,10 +59,7 @@ header p{
 }
 /* All Sections */
 
-.search-section,
-.message-section,
-.results-section,
-.favourites-section{
+.search-section, .message-section,.results-section,.favourites-section{
 
     border: 2px solid rgba(255,255,255,0.1);
     border-radius: 20px;
@@ -77,10 +74,7 @@ header p{
 }
 
 
-.search-section:hover,
-.message-section:hover,
-.results-section:hover,
-.favourites-section:hover{
+.search-section:hover,.message-section:hover,.results-section:hover,.favourites-section:hover{
     box-shadow: 0 0 30px rgba(255,0,0,0.731);
     transform: scale(1.05);
 
@@ -110,4 +104,81 @@ button[type="addToFavourites"]{
     background-color: red;
     color: white;
     cursor: pointer;
+}
+
+/* Favourite button once the word is saved (see script.js updateFavouriteButton) */
+button[type="addToFavourites"].saved{
+    background-color: #555555;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Search button while a lookup is in progress (see script.js setLoading) */
+form button[type="search"]:disabled{
+    background-color: #999999;
+    cursor: not-allowed;
+}
+
+/* Definition, pronunciation and audio blocks inside the results section */
+#definition h3,
+#pronunciation h3{
+    margin-top: 0;
+    text-align: left;
+}
+
+#definition h4{
+    margin-bottom: 5px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+#definition p,
+#pronunciation p{
+    text-align: left;
+    margin: 5px 0;
+}
+
+#definition a{
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Play Audio button, created dynamically in script.js */
+#audio button{
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: var(--button-text);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Favourites list, rebuilt each time in script.js displayFavorites */
+#favourites div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background-color: var(--input-color);
+}
+
+#favourites button{
+    padding: 6px 14px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: var(--button-text);
+    cursor: pointer;
+}
+
+#favourites button:last-child{
+    background-color: #ff0000;
+    color: #fff;
 }
