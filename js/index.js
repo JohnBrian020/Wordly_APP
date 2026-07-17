@@ -14,11 +14,11 @@ const favouriteBtn = document.querySelector("button[type='addToFavourites']");
 
 let currentWord = null;
 
-// Kick things off once the page is ready
+// starts when the page is ready
 document.addEventListener("DOMContentLoaded", () => {
     displayFavorites();
 
-    // If they had dark mode on last time, bring it back
+    // If it had dark mode on last time, bring it back
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         document.body.classList.add("dark-theme");
@@ -36,7 +36,7 @@ themeBtn.addEventListener("click", () => {
     }
 });
 
-// Wire up the search form
+// search form
 form.addEventListener("submit", handleSearch);
 
 async function handleSearch(event) {
@@ -57,7 +57,7 @@ async function handleSearch(event) {
     setLoading(false);
 }
 
-// Go fetch the word's info from the dictionary API
+// fetch the word's info from the dictionary API
 async function fetchWord(word) {
     try {
         const response = await fetch(
@@ -80,7 +80,7 @@ async function fetchWord(word) {
     }
 }
 
-// Take the API response and actually put it on the page
+// Take the API response and put it on the page
 function displayWord(data) {
     if (!Array.isArray(data) || data.length === 0) {
         displayError("Invalid data received.");
@@ -94,7 +94,7 @@ function displayWord(data) {
         phonetic: entry.phonetic || (entry.phonetics && entry.phonetics[0]?.text) || ""
     };
 
-    // The word itself
+    // word
     results.querySelector("h2").textContent = entry.word;
 
     // Definition section
@@ -219,7 +219,7 @@ function clearResults() {
     audioElement.innerHTML = "";
 }
 
-// Reads whatever favourites we've got saved in local storage
+// Read whatever favourites we've got saved in local storage
 function getFavorites() {
     try {
         const data = JSON.parse(localStorage.getItem("favorites"));
