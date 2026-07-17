@@ -19,7 +19,6 @@ It doesn't come with a built-in dictionary of its own. Instead it calls a free p
 -  Examples  — sample sentences so you can see the word used in context
 -  Synonyms  — a quick list of related words with similar meanings
 -  Favorites  — save words you want to remember using the browser's localStorage, and remove them whenever you like
--  Error handling  — if a word isn't found, or something breaks, you get a plain, friendly message instead of a blank screen
 -  Responsive design  — works whether you're on a phone, tablet, or desktop
 -  Theme toggle  — switch between light and dark mode, and it'll remember your choice next time you come back
 
@@ -44,12 +43,10 @@ README.md
 
 ## How to Run the Project
 
-Getting it running locally is pretty painless:
-
 1. Clone or download this repository.
 2. Open the project folder.
-3. Open `index.html` in your browser — or, if you want live-reloading while you tinker, use something like VS Code's  Live Server  extension.
-4. Type a word into the search box and hit  Search  to try it out.
+3. Open `index.html` in your browser .For live-reloading , use VS Code's  Live Server  extension.
+4. Type a word into the search box and hit  Search.
 
 ## API Information
 
